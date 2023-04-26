@@ -20,3 +20,19 @@ $(document).ready(function() {
         });
     });
 })
+
+const nombre = document.getElementById("nombre")
+const asunto = document.getElementById("asunto")
+const mensaje = document.getElementById("mensaje")
+
+function enviar() {
+    if(nombre.value.length <= 0) {
+        alert("Por favor, introduzca su nombre para enviar la solicitud de contacto")
+    } else if (asunto.value.length <= 0) {
+        alert("Por favor, introduzca su asunto para enviar la solicitud de contacto")
+    } else if (mensaje.value.length <= 0) {
+        alert("Por favor, escriba su mensaje para enviar la solicitud de contacto")
+    } else {
+        alert("¡ Solicitud enviada exitosamente !")
+    }
+}

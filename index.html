@@ -22,15 +22,15 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ms-auto">
-                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                    <a class="nav-link" href="#quienes-somos">Quienes Somos</a>
+                    <a class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
+                    <a class="nav-link d-none d-sm-block" href="#quienes-somos">Quienes Somos</a>
                     <a class="nav-link" href="#destacados">Destacados</a>
-                    <a class="nav-link" href="#">Contacto</a>
+                    <a class="nav-link" href="#contacto">Contacto</a>
                 </div>
             </div>
         </div>
     </nav>
-    <header>
+    <header id="inicio">
         <!--Boostrap: Uso de Carousel para mostrar imágenes destacadas de la página -->
         <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-indicators">
@@ -175,6 +175,31 @@
                                 ratione unde tempora quis aut repudiandae consequatur enim.</p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- JS Alerts: aquí debe llenar el formulario para poder enviar la solicitud de contacto, si no lo completa, la página mandará alertas 
+        de que es lo que le falta llenar para enviar dicha solicitud y si llena todo, la página le notificará con una alerta de que su solicitud ha sido enviada-->
+    <section id="contacto">
+        <h2 class="text-center display-4" id="destacar">Contacto</h2>
+        <hr class="border border border-1 opacity-25 mx-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-10 col-md-12">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Nombre:</label>
+                        <input type="text" class="form-control" id="nombre">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Asunto:</label>
+                        <input type="text" class="form-control" id="asunto">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Mensaje:</label>
+                        <textarea class="form-control" id="mensaje" rows="10"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-info" onclick="enviar()">Enviar</button>
                 </div>
             </div>
         </div>
