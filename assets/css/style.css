@@ -26,3 +26,12 @@ body {
     height: 200px;
     width: 100%;
 }
+
+.footer-color {
+    background-color: #0dcaf0;
+}
+
+.white a {
+    text-decoration: none;
+    color: white;
+}

@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    /* desplejar y ocultar el texto al clickear los botones con íconos*/
     $("#avion").click(function () {
         $("#descripcion1").toggle("slow", function() {
             
@@ -14,13 +15,14 @@ $(document).ready(function() {
 
         });
     });
+    /*Cambio de colores a blanco al clickear "Destacados" */
     $("#destacar").click(function() {
         $("#pordestacar h5, p").css({
             "color": "white"
         });
     });
 })
-
+/*Formulario de contacto */
 const nombre = document.getElementById("nombre")
 const asunto = document.getElementById("asunto")
 const mensaje = document.getElementById("mensaje")
@@ -36,3 +38,6 @@ function enviar() {
         alert("¡ Solicitud enviada exitosamente !")
     }
 }
+/* tooltips */
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
