@@ -16,3 +16,13 @@ body {
 .viajes {
     width: 7%;
 }
+
+.imagenes {
+    display: flex;
+}
+
+.imagenes img {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+}

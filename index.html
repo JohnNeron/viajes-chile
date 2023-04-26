@@ -24,13 +24,14 @@
                 <div class="navbar-nav ms-auto">
                     <a class="nav-link active" aria-current="page" href="#">Inicio</a>
                     <a class="nav-link" href="#quienes-somos">Quienes Somos</a>
-                    <a class="nav-link" href="#">Destacados</a>
+                    <a class="nav-link" href="#destacados">Destacados</a>
                     <a class="nav-link" href="#">Contacto</a>
                 </div>
             </div>
         </div>
     </nav>
     <header>
+        <!--Boostrap: Uso de Carousel para mostrar imágenes destacadas de la página -->
         <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
@@ -63,16 +64,21 @@
             </button>
         </div>
     </header>
+
     <section id="quienes-somos">
-        <div class="container">
+        <!-- Boostrap: uso del sistema de grillas para ordenar el contenido dentro del container -->
+        <div class="container mb-5 d-none d-sm-block">
             <h2 class="text-center display-4">¿Quienes Somos?</h2>
             <hr class="border border border-1 opacity-25">
             <div class="row">
                 <div class="col-4">
+                    <!-- Jquery toggle -->
                     <div class="d-grid gap-2">
-                        <button class="btn btn-primary" type="button"><i class="fa-solid fa-plane fa-2x"></i></button>
+                        <button class="btn btn-primary" type="button" id="avion"><i
+                                class="fa-solid fa-plane fa-2x"></i></button>
                     </div>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo esse quisquam aperiam nam
+                    <p id="descripcion1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo esse
+                        quisquam aperiam nam
                         maxime non adipisci, similique officia ipsam quo recusandae nihil. Quos, natus porro nostrum
                         illo non consectetur libero.
                         Odit saepe aperiam pariatur repellat sit voluptatem provident cumque cum fugit, similique
@@ -83,7 +89,9 @@
                         earum consectetur. Doloremque, voluptatem eos!</p>
                 </div>
                 <div class="col-4">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo esse quisquam aperiam nam
+                    <!-- Jquery toggle -->
+                    <p id="descripcion2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo esse
+                        quisquam aperiam nam
                         maxime non adipisci, similique officia ipsam quo recusandae nihil. Quos, natus porro nostrum
                         illo non consectetur libero.
                         Odit saepe aperiam pariatur repellat sit voluptatem provident cumque cum fugit, similique
@@ -93,14 +101,18 @@
                         reiciendis tenetur fugit esse officia, dicta temporibus. Quo suscipit, ex necessitatibus at
                         earum consectetur. Doloremque, voluptatem eos!</p>
                     <div class="d-grid gap-2">
-                        <button class="btn btn-primary" type="button"><i class="fa-solid fa-mountain fa-2x"></i></button>
+                        <button class="btn btn-primary" type="button" id="montana"><i
+                                class="fa-solid fa-mountain fa-2x"></i></button>
                     </div>
                 </div>
                 <div class="col-4">
+                    <!-- Jquery toggle -->
                     <div class="d-grid gap-2">
-                        <button class="btn btn-primary" type="button"><i class="fa-solid fa-route fa-2x"></i></button>
+                        <button class="btn btn-primary" type="button" id="ruta"><i
+                                class="fa-solid fa-route fa-2x"></i></button>
                     </div>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo esse quisquam aperiam nam
+                    <p id="descripcion3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo esse
+                        quisquam aperiam nam
                         maxime non adipisci, similique officia ipsam quo recusandae nihil. Quos, natus porro nostrum
                         illo non consectetur libero.
                         Odit saepe aperiam pariatur repellat sit voluptatem provident cumque cum fugit, similique
@@ -109,6 +121,60 @@
                         Omnis possimus impedit cupiditate quam unde assumenda sit eveniet amet suscipit ducimus totam
                         reiciendis tenetur fugit esse officia, dicta temporibus. Quo suscipit, ex necessitatibus at
                         earum consectetur. Doloremque, voluptatem eos!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="destacados">
+        <!-- JQuery para cambiar de color todo el texto de las tarjetas con un click -->
+        <h2 class="text-center display-4" id="destacar">Destacados</h2>
+        <hr class="border border border-1 opacity-25 mx-5">
+        <div class="container" id="pordestacar">
+            <div class="row imagenes">
+                <div class="col-sm-10 col-md-3 mb-5">
+                    <!-- Boostrap: Cards para mostrar imagen y información asociada a ella -->
+                    <div class="card">
+                        <img src="assets/img/card1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body btn btn-info">
+                            <h5 class="card-title">Lorem ipsum dolor sit amet</h5>
+                            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda
+                                dignissimos eius, saepe eos voluptas reiciendis dicta ipsum quas ea a aperiam? Nihil
+                                ratione unde tempora quis aut repudiandae consequatur enim.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-10 col-md-3 mb-5">
+                    <div class="card">
+                        <img src="assets/img/card2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body btn btn-info">
+                            <h5 class="card-title">Consectetur adipisicing elit</h5>
+                            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda
+                                dignissimos eius, saepe eos voluptas reiciendis dicta ipsum quas ea a aperiam? Nihil
+                                ratione unde tempora quis aut repudiandae consequatur enim.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-10 col-md-3 mb-5">
+                    <div class="card">
+                        <img src="assets/img/card3.jpg" class="card-img-top" alt="...">
+                        <div class="card-body btn btn-info">
+                            <h5 class="card-title">Sed do eiusmod tempor incididunt ut labore</h5>
+                            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda
+                                dignissimos eius, saepe eos voluptas reiciendis dicta ipsum quas ea a aperiam? Nihil
+                                ratione unde tempora quis aut repudiandae consequatur enim.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-10 col-md-3 mb-5">
+                    <div class="card">
+                        <img src="assets/img/card4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body btn btn-info">
+                            <h5 class="card-title">Ut enim ad minim veniam</h5>
+                            <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda
+                                dignissimos eius, saepe eos voluptas reiciendis dicta ipsum quas ea a aperiam? Nihil
+                                ratione unde tempora quis aut repudiandae consequatur enim.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
